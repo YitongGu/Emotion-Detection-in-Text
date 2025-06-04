@@ -1,40 +1,47 @@
-# Emotion Detection in Text using Natural Language Processing
+# Emotion Detection in Text
 
-<img src="./images/index.png"/>
+This project explores emotion classification from textual data using both deep learning (CNN-LSTM) and large language models (LLMs). The objective is to evaluate the effectiveness of different models in detecting human emotions across various datasets, and to examine the potential of lightweight LLMs for local inference.
 
-<br>
+## 📌 Project Highlights
 
-# Introduction
-Emotion detection in text data involves identifying the emotions expressed in textual data. This can be a challenging task since emotions are often expressed in complex and subtle ways. Natural language processing (NLP) techniques can be used to analyze text data and identify the emotions expressed in it.
+- **Replicated a CNN-LSTM model** from the paper [Deep Learning-Based Emotion Recognition Using CNN-LSTM](https://www.mdpi.com/2076-3417/10/18/6444)
+- **Evaluated large language models (LLMs)** including encoder-only (e.g., `all-MiniLM`, `mpnet`, `gtr-t5`) and decoder-only models (e.g., `TinyLLaMA`, `Mistral`)
+- **Compared performance across models and emotions**
+- **Focused on clean and reproducible experiments** using structured notebooks and code
 
-The aim of this project is to develop a model that uses NLP techniques to accurately detect emotions in text data. The model can be used for sentiment analysis, customer feedback analysis, and social media monitoring. The model is trained on a dataset of text data that has been labeled with the corresponding emotions expressed in it.
+## 🔍 Emotion Dataset
 
-# Dataset
-The <a src="./data/">dataset</a> used for this project contains text data labeled with one of eight emotions: anger, disgust, fear, joy, neutral, sadness, shame and surprise. The dataset contains a total of 34795 rows.
+Based on a real-world text emotion dataset with the following classes:
 
-# Methodology
-- The methodology used for this project involves the following steps:
-1. Preprocessing the text data: The text data is preprocessed by removing stop words, punctuation, user handles and converting all text to lowercase. 
-2. Model training: A machine learning model is trained on the extracted features to predict the emotions expressed in the text data. The model used for this project is a Logistic Regression and MultinomialNB.
-3. Model evaluation: The trained model is evaluated on the test data to measure its accuracy in detecting emotions in text data.
+- `joy`, `sadness`, `anger`, `fear`, `disgust`, `surprise`, `shame`, `neutral`
 
-# Results
-The Logistic Regression achieved an accuracy of 62% on the data.
+### Sample Entry
 
-# Installation
-1. Clone the repository to your local machine:
-```
-https://github.com/SannketNikam/Emotion-Detection-in-Text.git
-```
+| Emotion | Text | Cleaned Text |
+|--------|------|---------------|
+| Joy | "Looking forward to tomorrow!" | "looking forward tomorrow" |
 
-2. Install the 'requirements.txt':
-```
-pip install -r requirements.txt
-```
+## 🧠 Models Evaluated
 
-3. To run this project :
-```
-streamlit run app.py
-```
+| Model | Type | Size |
+|-------|------|------|
+| CNN-LSTM | Deep Learning | ~0.5M |
+| all-MiniLM-L12-v2 | Encoder-only | 66M |
+| all-MPNet-Base-V2 | Encoder-only | 109M |
+| GTR-T5-XL | Encoder-only | 3.7B |
+| TinyLLaMA | Decoder-only | 1.1B |
+| Mistral | Decoder-only | 7B |
 
-4. It'll automatically open the Streamlit app in your default browser.
+## 📊 Results Summary
+
+- CNN-LSTM achieved **high accuracy**, especially on `joy`, `sadness`, and `fear`, with fast local inference.
+- Lightweight LLMs like `TinyLLaMA` and `Mistral` underperformed compared to DL methods.
+- Encoder-only models showed **moderate accuracy**, especially on `joy` and `sadness`.
+- Larger LLMs demonstrate potential but are heavily constrained by size and computational resources.
+
+## 🛠️ How to Run
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/YitongGu/Emotion-Detection-in-Text.git
+   cd Emotion-Detection-in-Text
