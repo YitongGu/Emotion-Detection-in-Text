@@ -1,0 +1,60 @@
+Evaluating sentence-transformers_all-MiniLM-L12-v2...
+Overall Accuracy: 0.41
+
+Accuracy per Emotion:
+Neutral: 92/2254 = 0.04
+Joy: 4858/11045 = 0.44
+Sadness: 3676/6722 = 0.55
+Fear: 2715/5410 = 0.50
+Surprise: 863/4062 = 0.21
+Anger: 1691/4297 = 0.39
+Shame: 47/146 = 0.32
+Disgust: 301/856 = 0.35
+Evaluating sentence-transformers_all-MiniLM-L6-v2...
+Overall Accuracy: 0.38
+
+Accuracy per Emotion:
+Neutral: 334/2254 = 0.15
+Joy: 4452/11045 = 0.40
+Sadness: 2909/6722 = 0.43
+Fear: 2763/5410 = 0.51
+Surprise: 904/4062 = 0.22
+Anger: 1363/4297 = 0.32
+Shame: 46/146 = 0.32
+Disgust: 283/856 = 0.33
+Evaluating sentence-transformers_all-mpnet-base-v2...
+Overall Accuracy: 0.44
+
+Accuracy per Emotion:
+Neutral: 186/2254 = 0.08
+Joy: 4960/11045 = 0.45
+Sadness: 3345/6722 = 0.50
+Fear: 2343/5410 = 0.43
+Surprise: 1864/4062 = 0.46
+Anger: 2160/4297 = 0.50
+Shame: 33/146 = 0.23
+Disgust: 323/856 = 0.38
+Evaluating sentence-transformers_gtr-t5-large...
+Overall Accuracy: 0.34
+
+Accuracy per Emotion:
+Neutral: 483/2254 = 0.21
+Joy: 3395/11045 = 0.31
+Sadness: 2289/6722 = 0.34
+Fear: 1813/5410 = 0.34
+Surprise: 2070/4062 = 0.51
+Anger: 1347/4297 = 0.31
+Shame: 106/146 = 0.73
+Disgust: 263/856 = 0.31
+Evaluating sentence-transformers_gtr-t5-xl...
+Overall Accuracy: 0.34
+
+Accuracy per Emotion:
+Neutral: 598/2254 = 0.27
+Joy: 2966/11045 = 0.27
+Sadness: 2225/6722 = 0.33
+Fear: 1727/5410 = 0.32
+Surprise: 2344/4062 = 0.58
+Anger: 1444/4297 = 0.34
+Shame: 76/146 = 0.52
+Disgust: 321/856 = 0.38
